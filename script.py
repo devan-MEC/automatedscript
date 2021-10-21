@@ -52,3 +52,15 @@ def click(x,y):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)#presses defown
     time.sleep(0.03) #topause the script for 0.01s
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)#releases
+def dclickleftcoordbar():
+	pyautogui.doubleClick(827,98) #left coordinate
+	a=str(coordinate[0])
+
+def dclickrightcoordbar():
+	pyautogui.doubleClick(875,93) #right coordinate
+	b=str(coordinate[1])
+
+def enterpress():
+	keyboard.press(Key.enter)
+	keyboard.release(Key.enter)
+	pyautogui.sleep(0.5)
