@@ -38,3 +38,17 @@ for coord in coords:
 	coordinate.append(acoord)
 	coordinate.append(bcoord)
 	coordinates.append(coordinate)
+# print(coordinates)
+# #X:  827 Y:   98 RGB: (113,  99,  84) :left
+# #X:  875 Y:   93 RGB: (122,  96,  76) :right
+# pyautogui.doubleClick(827,98)
+# pyautogui.sleep(5)
+def say(c):
+	time.sleep(2)
+	keyboard.type(c)
+
+def click(x,y):
+    win32api.SetCursorPos((x,y))
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)#presses defown
+    time.sleep(0.03) #topause the script for 0.01s
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)#releases
